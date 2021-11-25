@@ -17,7 +17,7 @@ def loadImage(fname):
  
     fp.close()
 
-## 메인코드 ##
+## 메인코드 부분##
 filename="C:/SeungjunPython/RAW/tree.raw"
 window=Tk()
 window.title("흑백 사진 보기")
