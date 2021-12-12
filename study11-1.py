@@ -4,6 +4,7 @@ inStr="" #읽어 온 문자열
 i=0 ## 문장하나하나에 번호를 새길 변수
 inFp=open("C:/Temp/data1.txt", "r", encoding="utf-8") ## encoding을 안써주니까 cp949 에러가 납니다 전..
 
+
 while True : ##텍스트의 문장 한줄씩 받아오기
     inStr = inFp.readline()
     i+=1

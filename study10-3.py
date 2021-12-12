@@ -1,5 +1,6 @@
 ##code10-12를 수정하여 버튼 사이에 파일명을 표시해보자.
 ##code10-12에서 수정부분만 주석처리 하였다
+## 이벤트를 통한사진 넘기기 ## 
 from tkinter import *
 ##전역변수 부분##
 fnameList = ["cat.gif","dog.gif","nuguri.gif","hipo.gif","rebit.gif","elephant.gif","saseum.gif","panda.gif","pig.gif"]
@@ -23,14 +24,21 @@ def clickPrev():
     photo=PhotoImage(file="gif/"+fnameList[num])
     pLabel.configure(image=photo)
     pLabel.image= photo
+def pageUp(event):
+    clickNext()
+def pageDown(event):
+    clickPrev()
+        
+
+
 ##메인코드부분##
 window=Tk()
 window.geometry("700x500")
 window.title("사진 앨범보기")
 btnPrev=Button(window,text="<< 이전",command=clickPrev)
 btnNext=Button(window,text="다음 >>",command=clickNext)
-window.bind("<Up>",clickNext)
-window.bind("<Down>",clickPrev)
+window.bind("<Prior>",pageUp)
+window.bind("<Next>",pageDown)
 photo=PhotoImage(file="gif/"+fnameList[0])
 pLabel=Label(window,image=photo)
 label1=Label(window,text=fnameList[0]) ##레이블을 만들고 레이블명은 label1 그리고 text 초깃값은 사진초깃값과 동일한 인덱션으로한다.

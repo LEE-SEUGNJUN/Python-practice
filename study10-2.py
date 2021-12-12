@@ -11,7 +11,7 @@ i,k,xPos,yPos,num=[0] *5 ##필요한 변수들0으로 초기화
 ##메인코드 부분##
 window=Tk() ##윈도우 반환
 window.geometry("210x210") ##윈도창 가로 210 세로 210으로 설정 
-random.shuffle(fnameList) ## frameList를 섞어줘 이미지명 리스트를 셔플하여 photoList,btnList에 영향을 준다.
+random.shuffle(fnameList) ## frameList를 섞어줘 이미지명 리스트를 셔플하여 photoList에 영향을 준다.
 for i in range(0,9): ##인덱스 0부터 8까지 
     photoList[i]=PhotoImage(file="gif\\"+fnameList[i]) ##gif\그림파일이름 으로 이미지 파일을 생성하여 PhotoList리스트에 하나씩 저장
     btnList[i]=Button(window, image = photoList[i]) ##버튼을 만드는데 버튼은 이미지모양의 버튼을 생성

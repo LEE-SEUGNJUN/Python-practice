@@ -1,7 +1,7 @@
 ##code 10-4를 수정해서 이미지 2개가 나오게끔하기
 from tkinter import * ##GUI관련 모듈 제공해주는 윈도 라이브러리
 
-window = Tk() ## 윈도우를 반환하여 window에 저장.(window는 윈도우 창 그자체를 뜻)
+window = Tk() ## 윈도우를 반환하여 window에 저.장(window는 윈도우 창 그자체를 뜻)
 
 photo = PhotoImage(file="gif\dog.gif") ##file옵션의 파일명의 이미지를 photo변수에 담는다
 photo2 = PhotoImage(file="gif\cat.gif") ##file옵션의 파일명의 이미지를 photo2변수에 담는다
